@@ -1,0 +1,64 @@
+# Python OOP Cheatsheet
+
+## Core Concepts
+
+1. **`self`** - Instance methods/variables  
+   `def __init__(self, name): self.name = name`
+
+2. **`cls`** - Class methods/variables  
+   `@classmethod def make(cls): cls.count += 1`
+
+3. **Access Modifiers**  
+   Public: `var`, Protected: `_var`, Private: `__var`
+
+4. **Inheritance**  
+   `class Child(Parent): super().__init__()`
+
+5. **Abstract Class**  
+   `from abc import ABC, @abstractmethod`
+
+## Special Methods
+
+6. **`__init__`** - Constructor  
+7. **`__del__`** - Destructor  
+8. **`__call__`** - Make object callable  
+9. **`__iter__`/`__next__`** - Make iterable  
+
+## Decorators
+
+10. **`@property`** - Getter  
+11. **`@method.setter`** - Setter  
+12. **`@staticmethod`** - No `self`/`cls`  
+13. **`@classmethod`** - Works on class  
+
+## Relationships
+
+14. **Composition** - "Has-a" (strong)  
+   `Car has Engine`  
+15. **Aggregation** - "Uses" (weak)  
+   `Department uses Employees`
+
+## Advanced
+
+16. **MRO** - Method Resolution Order  
+17. **Custom Exceptions**  
+   `class MyError(Exception)`  
+18. **Function Decorators**  
+   `@log_calls def func()`  
+19. **Class Decorators**  
+   `@add_methods class MyClass`  
+
+## Quick Examples
+
+```python
+# Property
+class Product:
+    @property 
+    def price(self): return self._price
+
+# Iterator
+class Countdown:
+    def __iter__(self): return self
+    def __next__(self): # logic
+Run python main.py to see all examples.
+
